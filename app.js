@@ -11,8 +11,9 @@ function fetchingServerURL(text){
 btn.addEventListener("click", eventHandler);
 
 function eventHandler(){
-    outputDiv.innerText = inputText.value;
     fetch(fetchingServerURL(inputText.value))
         .then(response => response.json())
-        .then(json => console.log(json))
+        .then(json => {
+            outputDiv.innerText = json.contents.translated;
+        })
 }
