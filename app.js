@@ -8,6 +8,11 @@ function fetchingServerURL(text){
     return serverURL + "?" + "text="  + text;
 }
 
+function errorHandler(error){
+    console.error("An error occured, ", error);
+    alert("Error occured: ", error, ".Try again later");
+}
+
 btn.addEventListener("click", eventHandler);
 
 function eventHandler(){
@@ -16,4 +21,5 @@ function eventHandler(){
         .then(json => {
             outputDiv.innerText = json.contents.translated;
         })
+        .catch(errorHandler);
 }
