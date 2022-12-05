@@ -6,5 +6,6 @@ var outputDiv = document.querySelector("#output");
 btn.addEventListener("click", eventHandler);
 
 function eventHandler(){
-    console.log(inputText);
+    console.log(inputText.value);
+    outputDiv.innerText = inputText.value;
 }
