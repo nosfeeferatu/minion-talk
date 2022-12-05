@@ -2,7 +2,7 @@ var inputText = document.querySelector(".input-text");
 var btn = document.querySelector("button");
 var outputDiv = document.querySelector("#output");
 
-var serverURL = "https://api.funtranslatins.com/translate/minion.json";
+var serverURL = "https://api.funtranslations.com/translate/minion.json";
 
 function fetchingServerURL(text){
     return serverURL + "?" + "text="  + text;
@@ -10,7 +10,7 @@ function fetchingServerURL(text){
 
 function errorHandler(error){
     console.error("An error occured, ", error);
-    alert("Error occured: "+ error+ ".Try again later");
+    alert("Error occured: ", error, ".Try again later");
 }
 
 btn.addEventListener("click", eventHandler);
