@@ -10,7 +10,7 @@ function fetchingServerURL(text){
 
 function errorHandler(error){
     console.error("An error occured, ", error);
-    alert("Error occured: ", error, ".Try again later");
+    alert("Error occured: "+ error+ ".Try again later");
 }
 
 btn.addEventListener("click", eventHandler);
